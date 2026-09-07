@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — TripTrack</title>
+<style>
+  :root {
+    --primary: #0F3460;
+    --primary-dark: #0A2447;
+    --accent: #1A73E8;
+    --bg: #F5F7FA;
+    --surface: #FFFFFF;
+    --text: #1A1A2E;
+    --secondary-text: #5B6472;
+    --border: #E0E0E0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: #fff;
+    padding: 32px 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+  }
+
+  header p {
+    margin: 6px 0 0;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+  }
+
+  /* ── Sélecteur de langue (sans JS, via radios cachées) ── */
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: -20px auto 28px;
+    max-width: 760px;
+    padding: 0 20px;
+  }
+
+  .lang-switch input { display: none; }
+
+  .lang-switch label {
+    flex: 1;
+    text-align: center;
+    padding: 10px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--secondary-text);
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  #lang-fr:checked ~ .lang-switch label[for="lang-fr"],
+  #lang-en:checked ~ .lang-switch label[for="lang-en"] {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  #content-fr, #content-en { display: none; }
+  #lang-fr:checked ~ .container #content-fr,
+  #lang-en:checked ~ .container #content-en { display: block; }
+
+  .card {
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 24px 28px;
+    margin-bottom: 16px;
+  }
+
+  .card h2 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    color: var(--primary-dark);
+  }
+
+  .card p, .card li { color: var(--text); }
+
+  .highlight {
+    background: #E8F0FE;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 14px 0 0;
+  }
+
+  .updated {
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    margin: 18px 0 24px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 0.92rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--secondary-text);
+    font-weight: 600;
+    width: 38%;
+  }
+
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    padding-bottom: 30px;
+  }
+</style>
+</head>
+<body>
+
+<input type="radio" name="lang" id="lang-fr" checked>
+<input type="radio" name="lang" id="lang-en">
+
+<header>
+  <h1>TripTrack</h1>
+  <p>Politique de confidentialité · Privacy Policy</p>
+</header>
+
+<div class="lang-switch">
+  <label for="lang-fr">🇫🇷 Français</label>
+  <label for="lang-en">🇬🇧 English</label>
+</div>
+
+<div class="container">
+
+  <!-- ══════════════════════════ FRANÇAIS ══════════════════════════ -->
+  <div id="content-fr">
+    <p class="updated">Dernière mise à jour : 7 septembre 2026</p>
+
+    <div class="card">
+      <p>TripTrack (« l'Application ») est développée par <strong>BoninyDev (Boniny Développement)</strong>, développeur indépendant basé en France. TripTrack permet d'enregistrer vos déplacements professionnels et de générer des notes de frais kilométriques.</p>
+      <p>Cette politique explique quelles informations sont traitées lorsque vous utilisez TripTrack, et comment elles sont utilisées.</p>
+      <div class="highlight">
+        <strong>En résumé :</strong> TripTrack ne possède aucun serveur. Vos trajets, vos coordonnées et vos données bancaires restent sur votre téléphone. BoninyDev n'y a jamais accès et ne les reçoit jamais.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>1. Données de localisation</h2>
+      <p>TripTrack utilise le GPS de votre appareil pour mesurer la distance de vos trajets professionnels. C'est la fonction principale de l'application.</p>
+      <ul>
+        <li><strong>Localisation en cours d'utilisation</strong> : utilisée pour déterminer les points de départ et d'arrivée d'un trajet et calculer la distance parcourue.</li>
+        <li><strong>Localisation en arrière-plan</strong> : nécessaire pour continuer à enregistrer votre trajet lorsque l'écran est verrouillé ou que vous utilisez une autre application pendant que vous conduisez. Sans elle, un trajet s'interromprait dès que vous rangez votre téléphone.</li>
+        <li><strong>Reconnaissance d'activité</strong> : utilisée uniquement pour détecter automatiquement que vous êtes en véhicule, afin de démarrer et d'arrêter l'enregistrement sans intervention de votre part. Cette détection est effectuée par les services Google Play sur votre appareil.</li>
+      </ul>
+      <p>L'enregistrement n'a lieu que lorsque vous l'avez démarré manuellement, ou lorsque vous avez explicitement activé le mode automatique dans l'application. Une notification permanente vous indique en permanence qu'un enregistrement est en cours, et vous pouvez l'arrêter à tout moment depuis cette notification.</p>
+      <p><strong>Les coordonnées GPS enregistrées (points de départ, d'arrivée et tracé du trajet) sont stockées exclusivement dans une base de données locale sur votre téléphone. Elles ne sont transmises à aucun serveur, ni à BoninyDev, ni à un tiers.</strong></p>
+      <p>Vous pouvez révoquer les autorisations de localisation à tout moment dans les paramètres Android de votre appareil.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. Données que vous saisissez vous-même</h2>
+      <p>Pour produire vos notes de frais, TripTrack vous permet d'enregistrer :</p>
+      <ul>
+        <li>Votre identité et vos coordonnées (nom, prénom, adresse postale, téléphone) ;</li>
+        <li>Vos coordonnées bancaires (nom de la banque, IBAN, BIC), destinées à figurer sur vos notes de frais pour le remboursement ;</li>
+        <li>Vos véhicules (marque, modèle, immatriculation, puissance fiscale) ;</li>
+        <li>Vos entreprises ou clients (raison sociale, adresse, contact, e-mail, barèmes kilométriques) ;</li>
+        <li>Vos motifs de déplacement, lieux favoris et frais annexes.</li>
+      </ul>
+      <p>Toutes ces informations sont stockées <strong>localement et de façon chiffrée</strong> sur votre appareil. Les données sensibles (IBAN, BIC, nom de banque) sont protégées par le chiffrement Android Keystore et ne quittent jamais votre téléphone.</p>
+      <p><strong>BoninyDev n'a accès à aucune de ces données.</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>3. Abonnement et paiement</h2>
+      <p>TripTrack est proposé avec une période d'essai gratuite, puis sous forme d'abonnement payant. Les paiements sont intégralement gérés par <strong>Google Play Billing</strong>.</p>
+      <ul>
+        <li>BoninyDev ne voit, ne collecte et ne stocke <strong>aucune donnée de paiement</strong> : ni numéro de carte, ni coordonnées bancaires de paiement, ni adresse de facturation.</li>
+        <li>L'application interroge uniquement les services Google Play pour savoir si votre abonnement est actif. Cette vérification ne transmet aucune information personnelle vous concernant à BoninyDev.</li>
+        <li>Le traitement de vos données de paiement relève de la politique de confidentialité de Google : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+      </ul>
+      <p>Vous pouvez gérer ou résilier votre abonnement à tout moment depuis le Google Play Store : <em>Menu → Paiements et abonnements → Abonnements</em>.</p>
+    </div>
+
+    <div class="card">
+      <h2>4. Aucune publicité, aucun traceur, aucune analytique</h2>
+      <p>TripTrack ne contient <strong>aucune régie publicitaire</strong>, <strong>aucun outil d'analyse d'audience</strong> et <strong>aucun traceur tiers</strong>. L'application n'utilise pas l'identifiant publicitaire de votre appareil et ne crée aucun profil vous concernant.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Connexions réseau effectuées par l'application</h2>
+      <p>TripTrack fonctionne hors ligne pour l'essentiel. Les seules connexions réseau sont les suivantes :</p>
+      <table>
+        <tr><th>Destination</th><td>Objet</td></tr>
+        <tr><th>OpenStreetMap<br><small>(tile.openstreetmap.org)</small></th><td>Téléchargement des fonds de carte affichés dans l'application. Seules les coordonnées de la zone de carte affichée sont transmises, sous forme de requêtes de tuiles standard. Voir la <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">politique de confidentialité de l'OSM Foundation</a>.</td></tr>
+        <tr><th>Services Google Play</th><td>Détermination de la position GPS, reconnaissance d'activité, conversion des coordonnées en adresses postales (géocodage inverse) et vérification de l'état de votre abonnement.</td></tr>
+      </table>
+      <p>Aucune de ces connexions ne transmet vos trajets enregistrés, votre identité ou vos coordonnées bancaires.</p>
+    </div>
+
+    <div class="card">
+      <h2>6. Permissions utilisées par l'application</h2>
+      <table>
+        <tr><th>Permission</th><td>Utilisation</td></tr>
+        <tr><th>Localisation précise</th><td>Mesurer la distance de vos trajets et déterminer les adresses de départ et d'arrivée.</td></tr>
+        <tr><th>Localisation en arrière-plan</th><td>Poursuivre l'enregistrement d'un trajet lorsque l'écran est verrouillé ou qu'une autre application est ouverte.</td></tr>
+        <tr><th>Reconnaissance d'activité</th><td>Détecter automatiquement le début et la fin d'un déplacement en véhicule (mode automatique).</td></tr>
+        <tr><th>Service au premier plan</th><td>Maintenir l'enregistrement GPS actif et afficher la notification « trajet en cours ».</td></tr>
+        <tr><th>Notifications</th><td>Afficher la notification d'enregistrement en cours et vous signaler qu'un trajet est prêt à être validé.</td></tr>
+        <tr><th>Internet / État du réseau</th><td>Charger les fonds de carte OpenStreetMap et vérifier l'état de l'abonnement.</td></tr>
+        <tr><th>Facturation (Play Billing)</th><td>Gérer l'abonnement et la période d'essai via Google Play.</td></tr>
+        <tr><th>Démarrage au redémarrage</th><td>Vous proposer de reprendre le suivi automatique après un redémarrage du téléphone.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>7. Partage de données</h2>
+      <p>BoninyDev ne vend, ne loue et ne partage aucune de vos données avec des tiers.</p>
+      <p>Les seuls partages possibles sont ceux que <strong>vous déclenchez vous-même</strong> :</p>
+      <ul>
+        <li>Lorsque vous exportez une note de frais en PDF ou en Excel et que vous l'envoyez par e-mail ou par messagerie à votre employeur ou à votre client, via l'application de votre choix ;</li>
+        <li>Lorsque vous exportez une sauvegarde de vos données vers un fichier que vous placez à l'emplacement de votre choix.</li>
+      </ul>
+      <p>Dans ces deux cas, le contenu et le destinataire sont entièrement sous votre contrôle.</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Sécurité et conservation</h2>
+      <p>Vos données restent sur votre appareil, sous votre contrôle, aussi longtemps que vous conservez l'application. Elles ne font l'objet d'aucune sauvegarde automatique dans le cloud (la sauvegarde Android est explicitement désactivée pour la base de données et les préférences de l'application).</p>
+      <p>Les données sensibles (IBAN, BIC, nom de banque) sont chiffrées à l'aide de l'Android Keystore matériel de votre appareil.</p>
+      <p>Vous pouvez supprimer vos trajets et vos rapports individuellement depuis l'application, ou effacer l'intégralité de vos données en désinstallant TripTrack ou via <em>Paramètres Android → Applications → TripTrack → Stockage → Effacer les données</em>.</p>
+      <p>La fonction de sauvegarde chiffrée vous permet de conserver une copie de vos données protégée par un mot de passe que vous seul connaissez. <strong>Ce mot de passe n'est stocké nulle part : s'il est perdu, la sauvegarde est irrécupérable.</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>9. Vos droits (RGPD)</h2>
+      <p>Si vous résidez dans l'Union européenne, vous disposez de droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité concernant vos données personnelles.</p>
+      <p>TripTrack ne collectant aucune donnée personnelle sur des serveurs appartenant à BoninyDev, ces droits s'exercent directement depuis l'application :</p>
+      <ul>
+        <li><strong>Accès et portabilité</strong> : la fonction d'export vous restitue l'intégralité de vos données dans un format lisible et réutilisable ;</li>
+        <li><strong>Rectification</strong> : toutes vos données sont modifiables depuis l'application ;</li>
+        <li><strong>Effacement</strong> : suppression individuelle depuis l'application, ou effacement total via les paramètres Android.</li>
+      </ul>
+      <p>Pour les données traitées par Google (paiement, services de localisation), ces droits s'exercent auprès de Google (voir leur politique de confidentialité ci-dessus).</p>
+      <p>Pour toute question, vous pouvez nous contacter à l'adresse indiquée en bas de cette page.</p>
+    </div>
+
+    <div class="card">
+      <h2>10. Confidentialité des enfants</h2>
+      <p>TripTrack est un outil professionnel destiné aux adultes. L'application n'est pas destinée aux enfants de moins de 13 ans et BoninyDev ne collecte sciemment aucune donnée concernant des enfants.</p>
+    </div>
+
+    <div class="card">
+      <h2>11. Modifications de cette politique</h2>
+      <p>Cette politique de confidentialité peut être mise à jour de temps à autre. La date de la dernière mise à jour est indiquée en haut de cette page. En cas de modification substantielle, une information sera affichée dans l'application.</p>
+    </div>
+
+    <div class="card">
+      <h2>12. Contact</h2>
+      <p>Pour toute question relative à cette politique ou à l'application TripTrack, contactez-nous à :<br>
+      <strong>📧 contact@boninydev.com</strong></p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════ ENGLISH ══════════════════════════ -->
+  <div id="content-en">
+    <p class="updated">Last updated: September 7, 2026</p>
+
+    <div class="card">
+      <p>TripTrack (the "App") is developed by <strong>BoninyDev (Boniny Développement)</strong>, an independent developer based in France. TripTrack lets you record your business trips and generate mileage expense reports.</p>
+      <p>This policy explains what information is processed when you use TripTrack, and how it is used.</p>
+      <div class="highlight">
+        <strong>In short:</strong> TripTrack has no servers. Your trips, your contact details and your bank details stay on your phone. BoninyDev never has access to them and never receives them.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>1. Location data</h2>
+      <p>TripTrack uses your device's GPS to measure the distance of your business trips. This is the app's core function.</p>
+      <ul>
+        <li><strong>Location while in use</strong>: used to determine the start and end points of a trip and to calculate the distance travelled.</li>
+        <li><strong>Background location</strong>: required to keep recording your trip while the screen is locked or while you use another app as you drive. Without it, a trip would stop as soon as you put your phone away.</li>
+        <li><strong>Activity recognition</strong>: used only to automatically detect that you are in a vehicle, so recording can start and stop without any action from you. This detection is performed by Google Play services on your device.</li>
+      </ul>
+      <p>Recording only happens when you have started it manually, or when you have explicitly enabled automatic mode in the app. A persistent notification always tells you that a recording is in progress, and you can stop it at any time from that notification.</p>
+      <p><strong>The GPS coordinates recorded (start point, end point and trip route) are stored exclusively in a local database on your phone. They are not transmitted to any server, neither to BoninyDev nor to any third party.</strong></p>
+      <p>You can revoke location permissions at any time in your device's Android settings.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. Data you enter yourself</h2>
+      <p>To produce your expense reports, TripTrack lets you save:</p>
+      <ul>
+        <li>Your identity and contact details (first name, last name, postal address, phone number);</li>
+        <li>Your bank details (bank name, IBAN, BIC), intended to appear on your expense reports for reimbursement;</li>
+        <li>Your vehicles (make, model, licence plate, fiscal horsepower);</li>
+        <li>Your companies or clients (legal name, address, contact, e-mail, mileage rates);</li>
+        <li>Your trip purposes, favourite locations and additional expenses.</li>
+      </ul>
+      <p>All of this information is stored <strong>locally and encrypted</strong> on your device. Sensitive data (IBAN, BIC, bank name) is protected by Android Keystore encryption and never leaves your phone.</p>
+      <p><strong>BoninyDev has no access to any of this data.</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>3. Subscription and payment</h2>
+      <p>TripTrack is offered with a free trial period, then as a paid subscription. Payments are handled entirely by <strong>Google Play Billing</strong>.</p>
+      <ul>
+        <li>BoninyDev does not see, collect or store <strong>any payment data</strong>: no card number, no payment bank details, no billing address.</li>
+        <li>The app only queries Google Play services to know whether your subscription is active. This check does not send any personal information about you to BoninyDev.</li>
+        <li>Processing of your payment data is governed by Google's privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+      </ul>
+      <p>You can manage or cancel your subscription at any time from the Google Play Store: <em>Menu → Payments and subscriptions → Subscriptions</em>.</p>
+    </div>
+
+    <div class="card">
+      <h2>4. No ads, no trackers, no analytics</h2>
+      <p>TripTrack contains <strong>no advertising network</strong>, <strong>no analytics tool</strong> and <strong>no third-party tracker</strong>. The app does not use your device's advertising identifier and does not build any profile about you.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Network connections made by the app</h2>
+      <p>TripTrack works offline for the most part. The only network connections are:</p>
+      <table>
+        <tr><th>Destination</th><td>Purpose</td></tr>
+        <tr><th>OpenStreetMap<br><small>(tile.openstreetmap.org)</small></th><td>Downloading the map backgrounds shown in the app. Only the coordinates of the displayed map area are transmitted, as standard tile requests. See the <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OSM Foundation privacy policy</a>.</td></tr>
+        <tr><th>Google Play services</th><td>Determining GPS position, activity recognition, converting coordinates into postal addresses (reverse geocoding) and checking your subscription status.</td></tr>
+      </table>
+      <p>None of these connections transmit your recorded trips, your identity or your bank details.</p>
+    </div>
+
+    <div class="card">
+      <h2>6. Permissions used by the app</h2>
+      <table>
+        <tr><th>Permission</th><td>Purpose</td></tr>
+        <tr><th>Precise location</th><td>Measure the distance of your trips and determine start and end addresses.</td></tr>
+        <tr><th>Background location</th><td>Keep recording a trip while the screen is locked or another app is open.</td></tr>
+        <tr><th>Activity recognition</th><td>Automatically detect the start and end of a vehicle trip (automatic mode).</td></tr>
+        <tr><th>Foreground service</th><td>Keep GPS recording active and display the "trip in progress" notification.</td></tr>
+        <tr><th>Notifications</th><td>Show the recording notification and let you know a trip is ready to be confirmed.</td></tr>
+        <tr><th>Internet / Network state</th><td>Load OpenStreetMap map tiles and check subscription status.</td></tr>
+        <tr><th>Billing (Play Billing)</th><td>Manage the subscription and trial period through Google Play.</td></tr>
+        <tr><th>Run at startup</th><td>Offer to resume automatic tracking after the phone restarts.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>7. Data sharing</h2>
+      <p>BoninyDev does not sell, rent or share any of your data with third parties.</p>
+      <p>The only sharing that can occur is what <strong>you trigger yourself</strong>:</p>
+      <ul>
+        <li>When you export an expense report as PDF or Excel and send it by e-mail or messaging to your employer or client, using the app of your choice;</li>
+        <li>When you export a backup of your data to a file that you place wherever you choose.</li>
+      </ul>
+      <p>In both cases, the content and the recipient are entirely under your control.</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Security and retention</h2>
+      <p>Your data stays on your device, under your control, for as long as you keep the app installed. It is not backed up automatically to the cloud (Android backup is explicitly disabled for the app's database and preferences).</p>
+      <p>Sensitive data (IBAN, BIC, bank name) is encrypted using your device's hardware-backed Android Keystore.</p>
+      <p>You can delete your trips and reports individually from the app, or erase all of your data by uninstalling TripTrack or via <em>Android Settings → Apps → TripTrack → Storage → Clear data</em>.</p>
+      <p>The encrypted backup feature lets you keep a copy of your data protected by a password only you know. <strong>This password is not stored anywhere: if it is lost, the backup cannot be recovered.</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>9. Your rights (GDPR)</h2>
+      <p>If you reside in the European Union, you have rights of access, rectification, erasure, restriction, objection and portability regarding your personal data.</p>
+      <p>Since TripTrack collects no personal data on servers owned by BoninyDev, these rights are exercised directly from within the app:</p>
+      <ul>
+        <li><strong>Access and portability</strong>: the export feature returns all of your data in a readable, reusable format;</li>
+        <li><strong>Rectification</strong>: all of your data can be edited from within the app;</li>
+        <li><strong>Erasure</strong>: individual deletion from within the app, or full erasure via Android settings.</li>
+      </ul>
+      <p>For data processed by Google (payment, location services), these rights are exercised with Google (see their privacy policy above).</p>
+      <p>For any questions, you can contact us at the address listed at the bottom of this page.</p>
+    </div>
+
+    <div class="card">
+      <h2>10. Children's privacy</h2>
+      <p>TripTrack is a professional tool intended for adults. The app is not intended for children under 13 and BoninyDev does not knowingly collect any data from children.</p>
+    </div>
+
+    <div class="card">
+      <h2>11. Changes to this policy</h2>
+      <p>This privacy policy may be updated from time to time. The date of the last update is shown at the top of this page. In case of a substantial change, a notice will be shown in the app.</p>
+    </div>
+
+    <div class="card">
+      <h2>12. Contact</h2>
+      <p>For any question about this policy or the TripTrack app, contact us at:<br>
+      <strong>📧 contact@boninydev.com</strong></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  TripTrack — © 2026 BoninyDev (Boniny Développement)
+</footer>
+
+</body>
+</html>
